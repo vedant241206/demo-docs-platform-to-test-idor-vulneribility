@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaperNest — Secure Document Platform</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="brand-header">
+        <h1 class="brand-title">PaperNest</h1>
+        <p class="brand-subtitle">Simple, secure local document management</p>
+      </div>
+
+      <div class="tabs">
+        <button id="tab-login" class="tab-btn active" type="button">Sign In</button>
+        <button id="tab-register" class="tab-btn" type="button">Create Account</button>
+      </div>
+
+      <div id="auth-alert" class="alert alert-danger" style="display: none;"></div>
+
+      <form id="login-form" class="tab-pane active">
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" required placeholder="name@example.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="btn-login-submit">Sign In</button>
+      </form>
+
+      <form id="register-form" class="tab-pane">
+        <div class="form-group">
+          <label for="reg-email">Email Address</label>
+          <input type="email" id="reg-email" required placeholder="name@example.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" required placeholder="Create a password" autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="btn-register-submit">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

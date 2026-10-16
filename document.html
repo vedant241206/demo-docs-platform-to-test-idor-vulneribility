@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documents — PaperNest</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">PaperNest</a>
+    <div class="user-menu">
+      <span class="user-email" id="user-display">Loading...</span>
+      <button class="btn btn-secondary" id="btn-logout" type="button">Sign Out</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="dashboard-header">
+      <h2 class="dashboard-title">Your Documents</h2>
+    </div>
+
+    <div id="dash-alert" class="alert" style="display: none;"></div>
+
+    <div class="card">
+      <div class="upload-zone" id="drop-zone">
+        <div class="upload-icon">📄</div>
+        <p style="font-weight: 500;">Click to select a document or drag and drop</p>
+        <p class="upload-hint">Supported files: PDF, TXT, DOCX, Images, etc. (Max 25MB)</p>
+        <input type="file" id="file-input" class="file-input">
+      </div>
+
+      <div class="progress-container" id="upload-progress">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-text" id="progress-text">Uploading: 0%</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="table-wrapper">
+        <table class="doc-table" id="doc-table" style="display: none;">
+          <thead>
+            <tr>
+              <th>Document Name</th>
+              <th>Size</th>
+              <th>Uploaded At</th>
+              <th style="text-align: right;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="doc-list-body">
+          </tbody>
+        </table>
+
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <div class="empty-state-icon">📂</div>
+          <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.25rem;">No documents uploaded yet</p>
+          <p style="font-size: 0.875rem;">Use the upload area above to safely store your first file.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="preview-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="preview-modal-title">Document Preview</h3>
+        <button class="modal-close" id="preview-modal-close" type="button">&times;</button>
+      </div>
+      <div class="modal-body" id="preview-modal-body">
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

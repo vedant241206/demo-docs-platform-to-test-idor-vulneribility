@@ -1,0 +1,18 @@
+{
+  "name": "papernest",
+  "version": "1.0.0",
+  "description": "Lightweight local document upload platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js",
+    "test:fixture": "node test-fixture.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1",
+    "sqlite3": "^5.1.7"
+  }
+}
